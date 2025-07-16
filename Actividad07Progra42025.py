@@ -44,11 +44,12 @@ while True:
                 print(f"Nombre: {datos['nombre']}")
                 print(f"Edad: {datos['edad']}")
                 print(f"Carrera: {datos['carrera']}")
-                print(f":Curso {datos['cursos']['curso']}")
+                for curso, datos in estudiantes.items():
+                    print(f":Curso {datos['cursos']['curso']}")
+                    print(f"Nota Tarea: {datos['cursos']['notaTarea']}")
+                    print(f"Nota Parcial: {datos['cursos']['notaParcial']}")
+                    print(f"Nota Proyecto: {datos['cursos']['notaProyecto']}")
 
-                print(f"Nota Tarea: {datos['cursos']['notaTarea']}")
-                print(f"Nota Parcial: {datos['cursos']['notaParcial']}")
-                print(f"Nota Proyecto: {datos['cursos']['notaProyecto']}")
         case 3:
             print("Busqueda de Estudiantes por carne")
             buscando=input("Inngrese el Carne a Buscar: ")
