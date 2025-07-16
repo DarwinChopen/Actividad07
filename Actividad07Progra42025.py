@@ -1,4 +1,4 @@
-print("Actividad 7")
+
 while True:
     print("Actividad 7")
     print("1. Agregar Estudiantes")
@@ -31,7 +31,7 @@ while True:
                     "edad": edad,
                     "carrera": carrera,
                     "cursos": {
-                        "Curso": curso,
+                        "curso": curso,
                         "notaTarea": notaTarea,
                         "notaParcial": notaParcial,
                         "notaProyecto": notaProyecto
@@ -39,10 +39,32 @@ while True:
                 }
         case 2:
             print("Listado de Estudiantes")
+            for carnet, datos in estudiantes.items():
+                print(f"\nCarnet: {carnet}")
+                print(f"Nombre: {datos['nombre']}")
+                print(f"Edad: {datos['edad']}")
+                print(f"Carrera: {datos['carrera']}")
+                print(f":Curso {datos['cursos']['curso']}")
 
+                print(f"Nota Tarea: {datos['cursos']['notaTarea']}")
+                print(f"Nota Parcial: {datos['cursos']['notaParcial']}")
+                print(f"Nota Proyecto: {datos['cursos']['notaProyecto']}")
+        case 3:
+            print("Busqueda de Estudiantes por carne")
+            buscando=input("Inngrese el Carne a Buscar: ")
+            if buscando in estudiantes:
+                estudiante=estudiantes[buscando]
+                print("Estudiante Encontrado")
+                print(f"Nombre: {estudiante['nombre']}")
+                print(f"Edad: {estudiante['edad']}")
+                print(f"Carrera: {estudiante['carrera']}")
+                print(f"Curso: {estudiante['cursos']['curso']}")
+                print(f"Nota Tarea: {estudiante['cursos']['notaTarea']}")
+                print(f"Nota Parcial: {estudiante['cursos']['notaParcial']}")
+                print(f"Nota Proyecto: {estudiante['cursos']['notaProyecto']}")
 
-
-
+            else:
+                print("El estudiante no se encontro")
 
 
         case 4:
